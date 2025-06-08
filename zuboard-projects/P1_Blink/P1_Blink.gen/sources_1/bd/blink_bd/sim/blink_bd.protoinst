@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"blink_bd": {
+			"proto_instances": {
+			}
+		}
+	}
+}

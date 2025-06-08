@@ -1,0 +1,13 @@
+Time resolution is 1 ps
+Starting simulation...
+Time: 0 | LED0 = xxx | LED1 = xxx
+Time: 5000 | LED0 = 000 | LED1 = 000
+Time: 105000 | LED0 = 001 | LED1 = 001
+Time: 205000 | LED0 = 010 | LED1 = 010
+Time: 305000 | LED0 = 011 | LED1 = 011
+Time: 405000 | LED0 = 100 | LED1 = 100
+Time: 505000 | LED0 = 101 | LED1 = 101
+Time: 605000 | LED0 = 110 | LED1 = 110
+Time: 705000 | LED0 = 111 | LED1 = 111
+Time: 805000 | LED0 = 000 | LED1 = 000
+Time: 905000 | LED0 = 001 | LED1 = 001

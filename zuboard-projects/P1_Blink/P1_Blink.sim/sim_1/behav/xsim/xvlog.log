@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.srcs/sources_1/new/blink.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blink
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.srcs/sim_1/new/blink_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blink_tb

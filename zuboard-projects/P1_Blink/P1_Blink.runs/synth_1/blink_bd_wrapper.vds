@@ -1,0 +1,246 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sun Jun  8 20:11:03 2025
+# Process ID: 16402
+# Current directory: /home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.runs/synth_1
+# Command line: vivado -log blink_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blink_bd_wrapper.tcl
+# Log file: /home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.runs/synth_1/blink_bd_wrapper.vds
+# Journal file: /home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.runs/synth_1/vivado.jou
+# Running On        :joseph-pc
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04.2 LTS
+# Processor Detail  :Intel(R) Core(TM) i5-6440HQ CPU @ 2.60GHz
+# CPU Frequency     :2499.999 MHz
+# CPU Physical cores:4
+# CPU Logical cores :4
+# Host memory       :33530 MB
+# Swap memory       :4294 MB
+# Total Virtual     :37825 MB
+# Available Virtual :31842 MB
+#-----------------------------------------------------------
+source blink_bd_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1413.898 ; gain = 0.027 ; free physical = 20874 ; free virtual = 29542
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/ojakinlade/Vivado/2024.1/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental /home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.srcs/utils_1/imports/synth_1/blink_bd_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.srcs/utils_1/imports/synth_1/blink_bd_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top blink_bd_wrapper -part xczu1cg-sbva484-1-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu1cg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu1cg'
+INFO: [Device 21-403] Loading part xczu1cg-sbva484-1-e
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16478
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2247.926 ; gain = 405.746 ; free physical = 20086 ; free virtual = 28754
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'blink_bd_wrapper' [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.gen/sources_1/bd/blink_bd/hdl/blink_bd_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'blink_bd' [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.gen/sources_1/bd/blink_bd/synth/blink_bd.v:13]
+INFO: [Synth 8-6157] synthesizing module 'blink_bd_blink_0_0' [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.runs/synth_1/.Xil/Vivado-16402-joseph-pc/realtime/blink_bd_blink_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blink_bd_blink_0_0' (0#1) [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.runs/synth_1/.Xil/Vivado-16402-joseph-pc/realtime/blink_bd_blink_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blink_bd_zynq_ultra_ps_e_0_0' [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.runs/synth_1/.Xil/Vivado-16402-joseph-pc/realtime/blink_bd_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blink_bd_zynq_ultra_ps_e_0_0' (0#1) [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.runs/synth_1/.Xil/Vivado-16402-joseph-pc/realtime/blink_bd_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blink_bd' (0#1) [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.gen/sources_1/bd/blink_bd/synth/blink_bd.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'blink_bd_wrapper' (0#1) [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.gen/sources_1/bd/blink_bd/hdl/blink_bd_wrapper.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2332.895 ; gain = 490.715 ; free physical = 19991 ; free virtual = 28660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2344.770 ; gain = 502.590 ; free physical = 19991 ; free virtual = 28660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2344.770 ; gain = 502.590 ; free physical = 19991 ; free virtual = 28660
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2344.770 ; gain = 0.000 ; free physical = 19991 ; free virtual = 28660
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.gen/sources_1/bd/blink_bd/ip/blink_bd_zynq_ultra_ps_e_0_0/blink_bd_zynq_ultra_ps_e_0_0/blink_bd_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'blink_bd_i/zynq_ultra_ps_e_0'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2449.723 ; gain = 0.000 ; free physical = 19976 ; free virtual = 28645
+Finished Parsing XDC File [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.gen/sources_1/bd/blink_bd/ip/blink_bd_zynq_ultra_ps_e_0_0/blink_bd_zynq_ultra_ps_e_0_0/blink_bd_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'blink_bd_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.gen/sources_1/bd/blink_bd/ip/blink_bd_blink_0_0/blink_bd_blink_0_0/blink_bd_blink_0_0_in_context.xdc] for cell 'blink_bd_i/blink_0'
+Finished Parsing XDC File [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.gen/sources_1/bd/blink_bd/ip/blink_bd_blink_0_0/blink_bd_blink_0_0/blink_bd_blink_0_0_in_context.xdc] for cell 'blink_bd_i/blink_0'
+Parsing XDC File [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.srcs/constrs_1/new/zuboard_pins.xdc]
+Finished Parsing XDC File [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.srcs/constrs_1/new/zuboard_pins.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.srcs/constrs_1/new/zuboard_pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/blink_bd_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/blink_bd_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2449.723 ; gain = 0.000 ; free physical = 19976 ; free virtual = 28645
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2449.723 ; gain = 0.000 ; free physical = 19976 ; free virtual = 28645
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2449.723 ; gain = 607.543 ; free physical = 19996 ; free virtual = 28666
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu1cg-sbva484-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2449.723 ; gain = 607.543 ; free physical = 19996 ; free virtual = 28666
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for blink_bd_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blink_bd_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blink_bd_i/blink_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2449.723 ; gain = 607.543 ; free physical = 19996 ; free virtual = 28666
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2449.723 ; gain = 607.543 ; free physical = 19996 ; free virtual = 28666
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 216 (col length:72)
+BRAMs: 216 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2449.723 ; gain = 607.543 ; free physical = 19996 ; free virtual = 28670
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2536.840 ; gain = 694.660 ; free physical = 19942 ; free virtual = 28616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2536.840 ; gain = 694.660 ; free physical = 19942 ; free virtual = 28616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2546.855 ; gain = 704.676 ; free physical = 19934 ; free virtual = 28608
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2560.730 ; gain = 718.551 ; free physical = 20022 ; free virtual = 28707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2560.730 ; gain = 718.551 ; free physical = 20022 ; free virtual = 28707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2560.730 ; gain = 718.551 ; free physical = 20022 ; free virtual = 28707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2560.730 ; gain = 718.551 ; free physical = 20022 ; free virtual = 28707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2560.730 ; gain = 718.551 ; free physical = 20022 ; free virtual = 28707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2560.730 ; gain = 718.551 ; free physical = 20022 ; free virtual = 28707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------+----------+
+|      |BlackBox name                |Instances |
++------+-----------------------------+----------+
+|1     |blink_bd_blink_0_0           |         1|
+|2     |blink_bd_zynq_ultra_ps_e_0_0 |         1|
++------+-----------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------+------+
+|      |Cell                       |Count |
++------+---------------------------+------+
+|1     |blink_bd_blink_0           |     1|
+|2     |blink_bd_zynq_ultra_ps_e_0 |     1|
+|3     |OBUF                       |     6|
++------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2560.730 ; gain = 718.551 ; free physical = 20022 ; free virtual = 28707
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2560.730 ; gain = 613.598 ; free physical = 20022 ; free virtual = 28707
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2560.730 ; gain = 718.551 ; free physical = 20022 ; free virtual = 28707
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2560.730 ; gain = 0.000 ; free physical = 20312 ; free virtual = 28989
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2560.730 ; gain = 0.000 ; free physical = 20308 ; free virtual = 28985
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 5f0575f3
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 2560.730 ; gain = 1142.863 ; free physical = 20308 ; free virtual = 28985
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2067.071; main = 1711.997; forked = 393.380
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3580.328; main = 2546.859; forked = 1033.469
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2560.730 ; gain = 0.000 ; free physical = 20308 ; free virtual = 28985
+INFO: [Common 17-1381] The checkpoint '/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.runs/synth_1/blink_bd_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file blink_bd_wrapper_utilization_synth.rpt -pb blink_bd_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jun  8 20:11:54 2025...
