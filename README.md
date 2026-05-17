@@ -15,5 +15,22 @@ My overarching goal is to explore **hardware/software co-design**, with a focus 
 1. **Xilinx Vivado** (tested with version `2024.1`)
 2. **Xilinx Vitis** (for software development on the PS side)
 
+## Projects
+
+### P1_Blink
+
+Location: [`zuboard-projects/P1_Blink`](zuboard-projects/P1_Blink/)
+
+First PL-focused Vivado project. The Zynq UltraScale+ PS provides a 100 MHz PL
+clock, and a custom Verilog module cycles both on-board RGB LEDs through all
+8 color states.
+
+### P2_PS_PL_RGB
+
+Location: [`zuboard-projects/P2_PS_PL_RGB`](zuboard-projects/P2_PS_PL_RGB/)
+
+First PS/PL project. A bare-metal Cortex-A53 application writes color values to
+an AXI GPIO peripheral in the PL, and the AXI GPIO drives the ZUBoard RGB LEDs.
+
 ## 📚 Helpful Resources
 1. [Element14 Zed Community](https://community.element14.com/products/devtools/avnetboardscommunity/#pifragment-1273=6)
