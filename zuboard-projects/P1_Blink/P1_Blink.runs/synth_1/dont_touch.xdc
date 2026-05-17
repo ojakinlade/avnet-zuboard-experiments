@@ -12,4 +12,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blink_bd_zy
 # IP: bd/blink_bd/ip/blink_bd_blink_0_0/blink_bd_blink_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blink_bd_blink_0_0 || ORIG_REF_NAME==blink_bd_blink_0_0} -quiet] -quiet
 
-# XDC: /home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.gen/sources_1/bd/blink_bd/blink_bd_ooc.xdc
+# XDC: /home/joseph/Documents/vivado/avnet-zuboard-experiments/zuboard-projects/P1_Blink/P1_Blink.gen/sources_1/bd/blink_bd/blink_bd_ooc.xdc

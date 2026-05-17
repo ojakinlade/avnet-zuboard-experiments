@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version              : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date                      : Sun Jun  8 20:13:37 2025
-| Host                      : joseph-pc running 64-bit Ubuntu 24.04.2 LTS
+| Tool Version              : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date                      : Sun May 17 14:20:42 2026
+| Host                      : Joseph-PowerLabs running 64-bit Ubuntu 22.04.5 LTS
 | Command                   : report_io -file blink_bd_wrapper_io_placed.rpt
 | Design                    : blink_bd_wrapper
 | Device                    : xczu1cg

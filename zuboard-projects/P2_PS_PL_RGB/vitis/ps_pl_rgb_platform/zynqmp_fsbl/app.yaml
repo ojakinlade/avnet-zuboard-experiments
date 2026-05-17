@@ -1,0 +1,4 @@
+domain_path: /home/joseph/Documents/vivado/avnet-zuboard-experiments/zuboard-projects/P2_PS_PL_RGB/vitis/ps_pl_rgb_platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+app_src_dir: /home/joseph/Vitis/2024.2/data/embeddedsw/lib/sw_apps/zynqmp_fsbl
+template: zynqmp_fsbl
+lang: c

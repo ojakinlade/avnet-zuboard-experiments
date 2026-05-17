@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.srcs/constrs_1/new/zuboard_pins.xdc rfile:../../../P1_Blink.srcs/constrs_1/new/zuboard_pins.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/joseph/Documents/vivado/avnet-zuboard-experiments/zuboard-projects/P1_Blink/P1_Blink.srcs/constrs_1/new/zuboard_pins.xdc rfile:../../../P1_Blink.srcs/constrs_1/new/zuboard_pins.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN A7 [get_ports {rgb_led0_0[2]}]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]

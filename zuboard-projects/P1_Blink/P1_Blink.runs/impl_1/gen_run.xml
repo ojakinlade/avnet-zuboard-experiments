@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu1cg-sbva484-1-e" LaunchTime="1749409859">
+<GenRun Id="impl_1" LaunchPart="xczu1cg-sbva484-1-e" LaunchTime="1779023955">
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="blink_bd_wrapper_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS" Name="blink_bd_wrapper_routed.rqs"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="blink_bd_wrapper.vdi"/>
+  <File Type="BG-DRC" Name="blink_bd_wrapper.drc"/>
   <File Type="BG-BGN" Name="blink_bd_wrapper.bgn"/>
   <File Type="BITSTR-SYSDEF" Name="blink_bd_wrapper.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
@@ -15,7 +18,6 @@
   <File Type="RCFI_FILE" Name="blink_bd_wrapper.rcfi"/>
   <File Type="PL-PDI-FILE" Name="blink_bd_wrapper_pld.pdi"/>
   <File Type="BOOT-PDI-FILE" Name="blink_bd_wrapper_boot.pdi"/>
-  <File Type="RDI-RDI" Name="blink_bd_wrapper.vdi"/>
   <File Type="PDI-FILE" Name="blink_bd_wrapper.pdi"/>
   <File Type="BITSTR-MMI" Name="blink_bd_wrapper.mmi"/>
   <File Type="BITSTR-BMM" Name="blink_bd_wrapper_bd.bmm"/>
@@ -23,7 +25,6 @@
   <File Type="BITSTR-RBT" Name="blink_bd_wrapper.rbt"/>
   <File Type="BITSTR-MSK" Name="blink_bd_wrapper.msk"/>
   <File Type="BG-BIN" Name="blink_bd_wrapper.bin"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="BG-BIT" Name="blink_bd_wrapper.bit"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="blink_bd_wrapper_bus_skew_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="blink_bd_wrapper_bus_skew_postroute_physopted.pb"/>
@@ -33,7 +34,6 @@
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="blink_bd_wrapper_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="blink_bd_wrapper_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="blink_bd_wrapper_postroute_physopt.dcp"/>
-  <File Type="BG-DRC" Name="blink_bd_wrapper.drc"/>
   <File Type="ROUTE-RQS-PB" Name="blink_bd_wrapper_rqs_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="blink_bd_wrapper_bus_skew_routed.rpx"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="blink_bd_wrapper_bus_skew_routed.pb"/>
@@ -76,13 +76,13 @@
   <File Type="PWROPT-DRC" Name="blink_bd_wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-DCP" Name="blink_bd_wrapper_pwropt.dcp"/>
   <File Type="OPT-RQA-PB" Name="blink_bd_wrapper_rqa_opted.pb"/>
+  <File Type="OPT-TIMING" Name="blink_bd_wrapper_timing_summary_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="blink_bd_wrapper.hwdef"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="blink_bd_wrapper_methodology_drc_opted.rpt"/>
   <File Type="OPT-DRC" Name="blink_bd_wrapper_drc_opted.rpt"/>
   <File Type="OPT-DCP" Name="blink_bd_wrapper_opt.dcp"/>
-  <File Type="OPT-TIMING" Name="blink_bd_wrapper_timing_summary_opted.rpt"/>
-  <File Type="REPORTS-TCL" Name="blink_bd_wrapper_reports.tcl"/>
   <File Type="INIT-TIMING" Name="blink_bd_wrapper_timing_summary_init.rpt"/>
+  <File Type="REPORTS-TCL" Name="blink_bd_wrapper_reports.tcl"/>
   <File Type="PA-TCL" Name="blink_bd_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -140,9 +140,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.runs/impl_1/blink_bd_wrapper.tcl"
+  variable script "/home/joseph/Documents/vivado/avnet-zuboard-experiments/zuboard-projects/P1_Blink/P1_Blink.runs/impl_1/blink_bd_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -97,9 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -107,31 +104,29 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 1
-  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-4025-joseph-pc/incrSyn
   set_param runs.launchOptions { -jobs 2  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xczu1cg-sbva484-1-e
-  set_property board_part_repo_paths {/home/ojakinlade/.Xilinx/Vivado/2024.1/xhub/board_store/xilinx_board_store} [current_project]
+  set_property board_part_repo_paths {/home/joseph/.Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
   set_property board_part avnet.com:zuboard_1cg:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.cache/wt [current_project]
-  set_property parent.project_path /home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.xpr [current_project]
-  set_property ip_output_repo /home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/joseph/Documents/vivado/avnet-zuboard-experiments/zuboard-projects/P1_Blink/P1_Blink.cache/wt [current_project]
+  set_property parent.project_path /home/joseph/Documents/vivado/avnet-zuboard-experiments/zuboard-projects/P1_Blink/P1_Blink.xpr [current_project]
+  set_property ip_output_repo /home/joseph/Documents/vivado/avnet-zuboard-experiments/zuboard-projects/P1_Blink/P1_Blink.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.runs/synth_1/blink_bd_wrapper.dcp
+  add_files -quiet /home/joseph/Documents/vivado/avnet-zuboard-experiments/zuboard-projects/P1_Blink/P1_Blink.runs/synth_1/blink_bd_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.srcs/sources_1/bd/blink_bd/blink_bd.bd
+  add_files /home/joseph/Documents/vivado/avnet-zuboard-experiments/zuboard-projects/P1_Blink/P1_Blink.srcs/sources_1/bd/blink_bd/blink_bd.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.srcs/constrs_1/new/zuboard_pins.xdc
+  read_xdc /home/joseph/Documents/vivado/avnet-zuboard-experiments/zuboard-projects/P1_Blink/P1_Blink.srcs/constrs_1/new/zuboard_pins.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

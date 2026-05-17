@@ -8,9 +8,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/ojakinlade/Vivado/2024.1/ids_lite/ISE/bin/lin64:/home/ojakinlade/Vivado/2024.1/bin
+  PATH=/home/joseph/Vitis/2024.2/bin:/home/joseph/Vivado/2024.2/ids_lite/ISE/bin/lin64:/home/joseph/Vivado/2024.2/bin
 else
-  PATH=/home/ojakinlade/Vivado/2024.1/ids_lite/ISE/bin/lin64:/home/ojakinlade/Vivado/2024.1/bin:$PATH
+  PATH=/home/joseph/Vitis/2024.2/bin:/home/joseph/Vivado/2024.2/ids_lite/ISE/bin/lin64:/home/joseph/Vivado/2024.2/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/ojakinlade/Documents/vivado_projects/ZUBoard/P1_Blink/P1_Blink.runs/synth_1'
+HD_PWD='/home/joseph/Documents/vivado/avnet-zuboard-experiments/zuboard-projects/P1_Blink/P1_Blink.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,0 +1,3 @@
+/home/joseph/Documents/vivado/avnet-zuboard-experiments/zuboard-projects/P2_PS_PL_RGB/vitis/ps_pl_rgb_platform/zynqmp_fsbl/build/CMakeFiles/fsbl.elf.dir
+/home/joseph/Documents/vivado/avnet-zuboard-experiments/zuboard-projects/P2_PS_PL_RGB/vitis/ps_pl_rgb_platform/zynqmp_fsbl/build/CMakeFiles/edit_cache.dir
+/home/joseph/Documents/vivado/avnet-zuboard-experiments/zuboard-projects/P2_PS_PL_RGB/vitis/ps_pl_rgb_platform/zynqmp_fsbl/build/CMakeFiles/rebuild_cache.dir

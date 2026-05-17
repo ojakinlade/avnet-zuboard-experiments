@@ -1,7 +1,7 @@
 -------------------------------------
-| Tool Version : Vivado v.2024.1
-| Date         : Sun Jun  8 20:13:11 2025
-| Host         : joseph-pc
+| Tool Version : Vivado v.2024.2
+| Date         : Sun May 17 14:20:07 2026
+| Host         : Joseph-PowerLabs
 | Design       : design_1
 | Device       : xczu1cg-sbva484-1-E-
 -------------------------------------

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu1cg-sbva484-1-e" LaunchTime="1749409859" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/blink_bd_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xczu1cg-sbva484-1-e" LaunchTime="1779023773" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/blink_bd_wrapper.dcp">
+  <File Type="VDS-TIMING-PB" Name="blink_bd_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="blink_bd_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="blink_bd_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="blink_bd_wrapper_utilization_synth.pb"/>
@@ -7,7 +8,6 @@
   <File Type="RDS-PROPCONSTRS" Name="blink_bd_wrapper_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="blink_bd_wrapper.vds"/>
   <File Type="REPORTS-TCL" Name="blink_bd_wrapper_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="blink_bd_wrapper_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="blink_bd_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -65,9 +65,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="blink_bd_zynq_ultra_ps_e_0_0"/>
