@@ -49,42 +49,37 @@ module matmul_core #(
     
     logic signed [DATA_WIDTH-1:0] a_value;
     logic signed [DATA_WIDTH-1:0] b_value;
+    logic signed [DATA_WIDTH-1:0] a_matrix [0:N-1][0:N-1];
+    logic signed [DATA_WIDTH-1:0] b_matrix [0:N-1][0:N-1];
     logic signed [PRODUCT_WIDTH-1:0] product_value;
     logic signed [ACC_WIDTH-1:0] product_ext;
     logic signed [ACC_WIDTH-1:0] acc_next;
     
-    assign a_value = get_a(row_reg, k_reg);
-    assign b_value = get_b(k_reg, col_reg);
-    assign product_value = a_value * b_value;
-    assign acc_next = acc_reg + product_ext;
+    genvar gen_row;
+    genvar gen_col;
     
-    generate 
-        if (ACC_WIDTH > PRODUCT_WIDTH) begin : GEN_PRODUCT_EXTEND
-            assign product_ext = {{(ACC_WIDTH-PRODUCT_WIDTH){product_value[PRODUCT_WIDTH-1]}}, product_value};
-        end else if (ACC_WIDTH == PRODUCT_WIDTH) begin : GEN_PRODCUT_EXACT
-            assign prodcut_ext = product_value;
-        end else begin : GEN_PRODCUT_TRUNCATE
-            assign product_ext = product_value[ACC_WIDTH-1:0];
+    generate
+        for (gen_row = 0; gen_row < N; gen_row = gen_row + 1) begin : GEN_INPUT_ROWS
+            for (gen_col = 0; gen_col < N; gen_col = gen_col + 1) begin : GEN_INPUT_COLS
+                localparam integer FLAT_BASE = ((gen_row * N) + gen_col) * DATA_WIDTH;
+                assign a_matrix[gen_row][gen_col] = a_flat[FLAT_BASE +: DATA_WIDTH];
+                assign b_matrix[gen_row][gen_col] = b_flat[FLAT_BASE +: DATA_WIDTH];
+            end
         end
     endgenerate
+
+    assign a_value = a_matrix[row_reg][k_reg];
+    assign b_value = b_matrix[k_reg][col_reg];
+    assign product_value = $signed(a_value) * $signed(b_value);
+    assign acc_next = acc_reg + product_ext;
+    assign product_ext = resize_product(product_value);
     
-    function automatic signed [DATA_WIDTH-1:0] get_a;
-        input [INDEX_WIDTH-1:0] row;
-        input [INDEX_WIDTH-1:0] col;
-        integer base;
+    function automatic signed [ACC_WIDTH-1:0] resize_product;
+        input signed [PRODUCT_WIDTH-1:0] product;
+        logic signed [ACC_WIDTH-1:0] resized_product;
         begin
-            base = ((row * N) + col) * DATA_WIDTH;
-            get_a = a_flat[base +: DATA_WIDTH];
-        end
-    endfunction
-    
-    function automatic signed [DATA_WIDTH-1:0] get_b;
-        input [INDEX_WIDTH-1:0] row;
-        input [INDEX_WIDTH-1:0] col;
-        integer base;
-        begin
-            base = ((row * N) + col) * DATA_WIDTH;
-            get_b = b_flat[base +: DATA_WIDTH];
+            resized_product = product;
+            resize_product = resized_product;
         end
     endfunction
     

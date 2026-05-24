@@ -30,10 +30,10 @@ module tb_matmul_core(
     localparam integer CLK_PERIOD_NS = 10;
     
     logic clk = 1'b0;
-    logic resetn = 1'b0;
-    logic start = 1'b0;
-    logic signed [(N*N*DATA_WIDTH)-1:0] a_flat = '0;
-    logic signed [(N*N*DATA_WIDTH)-1:0] b_flat = '0;
+    logic resetn;
+    logic start;
+    logic signed [(N*N*DATA_WIDTH)-1:0] a_flat;
+    logic signed [(N*N*DATA_WIDTH)-1:0] b_flat;
     logic busy;
     logic done;
     logic signed [(N*N*ACC_WIDTH)-1:0] c_flat;
@@ -104,18 +104,24 @@ module tb_matmul_core(
         end
     endfunction
     
-    function automatic signed [DATA_WIDTH-1:0] get_c;
+    function automatic signed [ACC_WIDTH-1:0] get_c;
         input integer row;
         input integer col;
         integer base;
         begin
-            base = ((row * N) + col) * DATA_WIDTH;
+            base = ((row * N) + col) * ACC_WIDTH;
             get_c = c_flat[base +: ACC_WIDTH];
         end
     endfunction
     
     initial begin
         $display("Starting matmul_core simulation...");
+        
+        resetn = 1'b0;
+        start = 1'b0;
+        a_flat = '0;
+        b_flat = '0;
+        #1;
         
         set_a(0,0,1); set_a(0,1,2); set_a(0,2,3);
         set_a(1,0,4); set_a(1,1,5); set_a(1,2,6);
@@ -126,22 +132,24 @@ module tb_matmul_core(
         set_b(2,0,4); set_b(2,1,5); set_b(2,2,6);
         
         repeat (4) @(posedge clk);
-        resetn <= 1'b1;
+        @(negedge clk);
+        resetn = 1'b1;
         repeat (2) @(posedge clk);
         
-        start <= 1'b1;
-        @(posedge clk);
-        start <= 1'b0;
+        @(negedge clk);
+        start = 1'b1;
+        @(negedge clk);
+        start = 1'b0;
         
         wait (done == 1'b1);
-        @(posedge clk);
+        #1;
         
         errors = 0;
         for (i = 0; i < N; i = i + 1) begin
             for (j = 0; j < N; j = j + 1) begin
                 expected = 0;
                 for (k = 0; k < N; k = k + 1) begin
-                    expected = expected + (get_a(i,k) * get_b(k,j));
+                    expected = expected + ($signed(get_a(i,k)) * $signed(get_b(k,j)));
                 end
                 
                 observed = get_c(i, j);
