@@ -1,0 +1,46 @@
+# OS/editor noise
+.DS_Store
+.vscode/
+
+# Vivado generated output
+.Xil/
+*.cache/
+*.runs/
+*.sim/
+*.gen/
+*.hw/
+*.ip_user_files/
+
+# Vivado logs, journals, databases, and reports
+*.jou
+*.log
+*.pb
+*.rpx
+*.wdb
+*.str
+*.vdi
+*.vds
+*.dcp
+
+# Vivado bitstream/export artifacts
+*.bit
+*.bin
+*.ltx
+*.mmi
+*.hwh
+*.xsa
+
+# Vitis generated output
+.metadata/
+.analytics/
+Debug/
+Release/
+build/
+_ide/
+.settings/
+.project
+.cproject
+compile_commands.json
+
+# Language server indexes
+.cache/
